@@ -3,12 +3,11 @@ package com.employee.org;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Scanner;
 
-public class Test {
+public class TestDate {
     String dateFormat;
 
-    public Test(String dateFormat) {
+    public TestDate(String dateFormat) {
         this.dateFormat = dateFormat;
     }
 
@@ -28,8 +27,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Test test= new Test("dd-MM-yyyy");
-        System.out.println(test.isValid("23-18-2020"));
+        TestDate test= new TestDate("dd-MM-yyyy");
+        System.out.println(test.isValid("23-12-2020"));
 
     }
 }
