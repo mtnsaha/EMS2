@@ -3,18 +3,16 @@ package com.employee.org.controller;
 
 import com.employee.org.model.Employee;
 import com.employee.org.service.EmployeeService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @Scope("request")
+@CrossOrigin("*")
 public class EmployeeController {
 
     private static final Logger log = LoggerFactory.getLogger(EmployeeController.class);
@@ -25,7 +23,7 @@ public class EmployeeController {
     @PostMapping("/addEmployee")
     public void addEmployee(@RequestBody Employee employee) {
         log.debug("i am logg debug");
-        log.info("add employee started having employee name as "+ employee.getEName());
+        log.info("add employee started having employee name as "+ employee.getEmployeeName());
         employeeService.addEmployee(employee);
         log.info("add employee ended");
     }

@@ -15,8 +15,9 @@ public interface EmployeeCrudRepository extends CrudRepository<Employee, Integer
 }
 */
 
-@Repository
+
 public interface EmployeeCrudRepository extends JpaRepository<Employee, Integer> {
-    List<Employee> findByeName(String name);
-    List<Employee> findByeLocation(String location);
+    List<Employee> findByemployeeName(String name);
+    List<Employee> findByemployeeLocation(String location);
+
 }

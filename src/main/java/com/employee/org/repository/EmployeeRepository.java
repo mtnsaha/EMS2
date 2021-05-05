@@ -1,7 +1,5 @@
 package com.employee.org.repository;
-
 import com.employee.org.model.Employee;
-import com.employee.org.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -38,10 +36,10 @@ public class EmployeeRepository{
     }
 
     public List<Employee> findByName(String name) {
-        return employeeCrudRepository.findByeName(name);
+        return employeeCrudRepository.findByemployeeName(name);
     }
 
-    public List<Employee> findByLoction(String location) {
-    return employeeCrudRepository.findByeLocation(location);
+    public List<Employee> findByLocation(String location) {
+    return employeeCrudRepository.findByemployeeLocation(location);
     }
 }

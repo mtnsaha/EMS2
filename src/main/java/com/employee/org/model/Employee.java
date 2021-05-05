@@ -11,20 +11,29 @@ import javax.persistence.*;
 @ToString
 @NoArgsConstructor
 @Entity
-@Table
+@Table(name = "Employee")
 public class Employee {
 
 
-    @Column(name = "EMPLOYEE_NAME")
-    String eName;
+    @Column(name = "employee_name")
+    String employeeName;
     @Id
-    @GeneratedValue
-    @Column(name="EMPLOYEE_ID")
-    int eId;
-    @Column(name="EMPLOYEE_LOCATION")
-    String eLocation;
-    @Column(name= "EMPLOYEE_MOBILE")
-    String eMobile;
+    @Column(name="employee_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_generator")
+    @SequenceGenerator(name="employee_generator", sequenceName = "employee_seq", allocationSize = 1)
+    int employeeId;
+    @Column(name="employee_location")
+    String employeeLocation;
+    @Column(name= "employee_phone_no")
+    String employeeMobile;
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "DEPT_NO")
+    //Department department;
 
+    @Transient
+    String departmentName;
+
+    @Column(name = "dept_no")
+    int departmentNo;
 
 }
