@@ -28,7 +28,7 @@ public class TestDate {
     public static void main(String[] args) {
 
         TestDate test= new TestDate("dd-MM-yyyy");
-        System.out.println(test.isValid("23-12-2020"));
+        System.out.println(test.isValid("29-02-2021"));
 
     }
 }
