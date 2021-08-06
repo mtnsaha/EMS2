@@ -27,7 +27,7 @@ public class EmployeeController {
         employeeService.addEmployee(employee);
         log.info("add employee ended");
     }
-
+//this is just for testing
    /* @GetMapping("/getEmployee")
     public Employee getEmployee(@RequestParam Employee employee) {
         return employeeService.getEmployee(employee);
